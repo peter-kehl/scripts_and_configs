@@ -1,7 +1,7 @@
 @import url("userChromeXUL.css");
 /* TEST: Tilda ~ doesn't work in @import URLs */
 
-@import url("/home/pkehl/GIT/CustomCSSforFx/classic/css/toolbars/menubar_in_fullscreen_mode.css");
+@import url("CustomCSSforFx/classic/css/toolbars/menubar_in_fullscreen_mode.css");
 
 * {
 font-size: 15pt !important

@@ -1,0 +1,47 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+/* Thanks to https://superuser.com/questions/1276800/customize-the-maximum-width-of-the-firefox-sidebar */
+#sidebar {
+max-width: none !important;
+min-width: 0px !important;
+}
+
+/* https://support.mozilla.org/en-US/questions/926424 */
+#urlbar .textbox-input-box { font-size:12pt !important; }
+#TabsToolbar {
+/*   visible: true !important;/**/
+}
+
+#nav-bar[inFullscreen] /*:not([collapsed="true"])/**/ {
+  /*visibility:visible !important;/**/
+}
+
+/** Pressing Alt in full screen with the following rule
+ - shows the navigator bar (if set to auto-hide in full-screen)
+ - activates menu (even if it's hidden) via toolbar > right click > Menu Bar
+*/
+/*
+#navigator-toolbox[inFullscreen] toolbar#toolbar-menubar {
+  visibility:visible !important;
+}/**/
+
+#navigator-toolbox,
+#TabsToolbar,
+#TabsToolbar[moz-collapsed="true"] {/*
+  visibility: visible !important;
+  display:-moz-box !important;;
+  background-color: blue !important;/**/
+}
+
+#navigator-toolbox[inFullscreen] #TabsToolbar[moz-collapsed="true"] {
+/*
+  margin-top:-62px !important;/**/
+}
+
+/* This worked in reverse (with NO autohide)
+#TabsToolbar[inFullscreen] {
+  visible: false !important;
+  visibility: hidden !important;
+  display: none !important;
+}/**/
+
+/* ----- */

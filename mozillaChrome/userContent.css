@@ -1,0 +1,14 @@
+/*@namespace url(http://www.w3.org/1999/xhtml);
+*/
+
+/* or: @-moz-document domain(...) */
+@-moz-document url(https://keep.google.com/) {
+  div#ognwrapper, div#ognwrapper * {
+        background-color: transparent !important;
+  }
+  body, header, * {
+        min-width: auto !important;
+	width: auto !important;
+  }
+}
+@import url("javascript:'*{ background-color: blue !important;}'");

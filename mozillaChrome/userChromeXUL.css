@@ -1,4 +1,8 @@
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+#main-window:not([customizing]) #navigator-toolbox:not(:focus-within):not(:hover) {
+  margin-top: 0px;
+}
+
 /* Thanks to https://superuser.com/questions/1276800/customize-the-maximum-width-of-the-firefox-sidebar */
 #sidebar {
 max-width: none !important;
@@ -32,12 +36,25 @@ min-width: 0px !important;
   background-color: blue !important;/**/
 }
 
-#navigator-toolbox[inFullscreen] #TabsToolbar[moz-collapsed="true"] {
-/*
-  margin-top:-62px !important;/**/
+/* Hide Navigation bar when NOT in Full Screen. To show it, Ctrl+L doesn't work. Instead, hover
+ * the mouse over the Tabs bar, and that shows the Navigation bar, too. */
+/* NO: #main-window:not([customizing]) #nav-bar:not(:focus-within):not(:hover):not( [inFullscreen] ) {*/
+#main-window:not([customizing]):not( [inFullscreen] ) #navigator-toolbox:not(:focus-within):not(:hover) #nav-bar {
+  visible: false !important;
+  visibility: hidden !important;
+  display: none !important;
 }
 
-/* This worked in reverse (with NO autohide)
+/* Hide Tabs bar when NOT in Full Screen. However, it closes arbitrary tabs, and clears pinned tabs!
+ * Luckily, tabs are re-opened (and pinned tabs are re-loaded) if you disable this and restart Firefox. */
+/*#TabsToolbar:not( [inFullscreen] ) {
+  visible: false !important;
+  visibility: hidden !important;
+  display: none !important;
+}/**/
+
+/* This hid the Tabs bar, in Full Screen only */
+/*
 #TabsToolbar[inFullscreen] {
   visible: false !important;
   visibility: hidden !important;

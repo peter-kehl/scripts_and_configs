@@ -11,22 +11,6 @@ min-width: 0px !important;
 
 /* https://support.mozilla.org/en-US/questions/926424 */
 #urlbar .textbox-input-box { font-size:12pt !important; }
-#TabsToolbar {
-/*   visible: true !important;/**/
-}
-
-#nav-bar[inFullscreen] /*:not([collapsed="true"])/**/ {
-  /*visibility:visible !important;/**/
-}
-
-/** Pressing Alt in full screen with the following rule
- - shows the navigator bar (if set to auto-hide in full-screen)
- - activates menu (even if it's hidden) via toolbar > right click > Menu Bar
-*/
-/*
-#navigator-toolbox[inFullscreen] toolbar#toolbar-menubar {
-  visibility:visible !important;
-}/**/
 
 #navigator-toolbox,
 #TabsToolbar,
@@ -37,7 +21,8 @@ min-width: 0px !important;
 }
 
 /* Hide Navigation bar when NOT in Full Screen. To show it, Ctrl+L doesn't work. Instead, hover
- * the mouse over the Tabs bar, and that shows the Navigation bar, too. */
+ * the mouse over the Tabs bar, and that shows the Navigation bar, too.
+ * */
 /* NO: #main-window:not([customizing]) #nav-bar:not(:focus-within):not(:hover):not( [inFullscreen] ) {*/
 #main-window:not([customizing]):not( [inFullscreen] ) #navigator-toolbox:not(:focus-within):not(:hover) #nav-bar {
   visible: false !important;
@@ -45,20 +30,11 @@ min-width: 0px !important;
   display: none !important;
 }
 
-/* Hide Tabs bar when NOT in Full Screen. However, it closes arbitrary tabs, and clears pinned tabs!
+/* Hide Tabs bar when NOT in Full Screen.
+ * However, it closes arbitrary tabs, and clears pinned tabs!
  * Luckily, tabs are re-opened (and pinned tabs are re-loaded) if you disable this and restart Firefox. */
 /*#TabsToolbar:not( [inFullscreen] ) {
   visible: false !important;
   visibility: hidden !important;
   display: none !important;
 }/**/
-
-/* This hid the Tabs bar, in Full Screen only */
-/*
-#TabsToolbar[inFullscreen] {
-  visible: false !important;
-  visibility: hidden !important;
-  display: none !important;
-}/**/
-
-/* ----- */

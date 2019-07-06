@@ -1,26 +1,9 @@
 @import url("userChromeXUL.css");
-/* TEST: Tilda ~ doesn't work in @import URLs */
+/* TEST: Tilda ~ doesn't work in @import URLs. But relative URLs do work. */
 
 @import url("CustomCSSforFx/classic/css/toolbars/menubar_in_fullscreen_mode.css");
 
+/* For high-resolution screen: */
 * {
 font-size: 15pt !important
 }
-
-/*@import url("userChromeHTML.css");*/
-
-/*
-Not working https://bugzilla.mozilla.org/show_bug.cgi?id=877479#c14*/
-/*#TabsToolbar { border : none !important;}
-#TabsToolbar { min-height: 0px !important;}
- #TabsToolbar > toolbarbutton,.tabs-newtab-button { visibility: collapse !important;}
- #tabbrowser-tabs tab[first-tab='true'][last-tab='true'] { display:none !important; }
-*/
-
-/* hide navigation bar when it is not focused; use Ctrl+L to get focus
-   NOT working */
-/*
-#main-window:not([customizing]) #navigator-toolbox:not(:focus-within):not(:hover) {
-  margin-top: 0px;
-}/**/
-

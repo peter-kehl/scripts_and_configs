@@ -24,11 +24,13 @@ min-width: 0px !important;
  * the mouse over the Tabs bar, and that shows the Navigation bar, too.
  * */
 /* NO: #main-window:not([customizing]) #nav-bar:not(:focus-within):not(:hover):not( [inFullscreen] ) {*/
+/* However, while this worked, it upset Firefox: Address bar didn't show URL of restored tabs as you clicked from one tab to another.
+ * Even worse, address bar didn't work well even in Full Screen mode, when this shuld have no effect.
 #main-window:not([customizing]):not( [inFullscreen] ) #navigator-toolbox:not(:focus-within):not(:hover) #nav-bar {
   visible: false !important;
   visibility: hidden !important;
   display: none !important;
-}
+}/**/
 
 /* Hide Tabs bar when NOT in Full Screen.
  * However, it closes arbitrary tabs, and clears pinned tabs!

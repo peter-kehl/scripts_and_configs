@@ -1,6 +1,8 @@
 /*@namespace url(http://www.w3.org/1999/xhtml);
 */
 
+@-moz-document url-prefix(about:blank) {*{background-color:#000000;}}
+
 /* or: @-moz-document domain(...) */
 @-moz-document url(https://keep.google.com/) {
   div#ognwrapper, div#ognwrapper * {

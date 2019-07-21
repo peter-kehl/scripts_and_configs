@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<html lang=en-US>
+ <head><meta content="text/html;charset=UTF-8" http-equiv=Content-type>
+ <style type="text/css">
+/* High-resolution laptop: 2560px, Sidebar */
+@media (min-width: 1450px) and (max-width: 2560px) /* content */
+{.laptop-content {visibility: visible !important;}}
+@media (min-width: 400px ) and (max-width:  700px)  /* sidebar */
+{.laptop-sidebar {visibility: visible !important;}}
+@media (min-width: 700px ) and (max-width:  900px)  /* filling a gap between the rules */
+{.laptop-gap {visibility: visible !important;}}
+
+/* Small-resolution VGA: 1440px, Sidebar */
+@media (min-width: 900px) and (max-width: 1440px)
+{.vga-content {visibility: visible !important;}}
+@media (max-width: 400px) /* sidebar */
+{.vga-sidebar {visibility: visible !important;}}
+</style>
+</head>
+<body>
+  <div class="laptop-content" style="visibility: hidden;">laptop-content</div>
+  <div class="laptop-sidebar" style="visibility: hidden;">laptop-sidebar</div>
+  <div class="laptop-gap"     style="visibility: hidden;">laptop-gap</div>
+  <div class="vga-content"    style="visibility: hidden;">vga-content</div>
+  <div class="vga-sidebar"    style="visibility: hidden;">vga-sidebar</div>
+</body>
+</html>

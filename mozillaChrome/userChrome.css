@@ -4,15 +4,15 @@
 @import url("CustomCSSforFx/classic/css/toolbars/menubar_in_fullscreen_mode.css");
 
 /* For high-resolution screen: */
-@media all and (max-width: 2560px) {
+@media (max-width: 2560px) {
   * {
-    font-size: 22pt !important
+    font-size: 20pt !important;
   }
 }
 
 /* For small-resolution screen: */
-@media all and (max-width: 1440px) {
+@media (max-width: 1440px) {
   * {
-    font-size: 15pt !important
+    font-size: 10pt !important;
   }
 }

@@ -10,7 +10,7 @@
         color: black;
         background-color: white;
   }
-  span.fancytree-title {
+  span.fancytree-title, div.filterHBox input {
         color: white !important;
   }
 }
@@ -28,6 +28,7 @@
 	width: auto !important;
   }
 }
+/* @TODO Re-try the following, but have it before any other rules. */
 @import url("javascript:'*{ background-color: blue !important;}'");
 
 /* TODO: disable, then have a separate .html with rules and colours to debug @media width*/

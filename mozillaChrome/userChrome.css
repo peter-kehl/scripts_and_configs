@@ -1,6 +1,8 @@
 @import url("userChromeXUL.css");
 /* TEST: Tilda ~ doesn't work in @import URLs. But relative URLs do work. */
 
+@import "CustomCSSforFx/css/toolbars/toolbars_old_padding.css"; /**/
+@import "CustomCSSforFx/css/toolbars/tabs_toolbar_adjustments.css"; /**/
 @import url("CustomCSSforFx/classic/css/toolbars/menubar_in_fullscreen_mode.css");
 
 /* For dual screen, when I used the highest resolution for both screens: */

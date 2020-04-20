@@ -1,5 +1,19 @@
 /*@namespace url(http://www.w3.org/1999/xhtml);
 */
+/* Replace the moz-extension://... with the URL for your own installation of FESS Google Bookmarks Extension */
+@-moz-document url-prefix("moz-extension://995177b0-3af3-4d5c-99fd-0e89abbd04b0/") {
+  html *, body *, * {
+        color: white;
+        background-color: black;
+  }
+  select, input, textarea {
+        color: black;
+        background-color: white;
+  }
+  span.fancytree-title {
+        color: white !important;
+  }
+}
 
 /* New tabs are black. */
 @-moz-document url-prefix(about:blank) {*{background-color:#000000;}}

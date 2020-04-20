@@ -1,6 +1,6 @@
 [rebase]
 	abbreviateCommands = true
-
+	autoSquash = true
 [help]
 	autocorrect = 2 #in tenths of a second
 

@@ -9,6 +9,7 @@ max-width: none !important;
 min-width: 0px !important;
 }
 
+/* The following would help at high density resolution, but it doesn't apply, unfortunately */
 #sidebar html, #sidebar body, #sidebar, #sidebar *,
 #sidebar page stack#webext-panels-stack,
 #webext-panels-stack, #webext-panels-browser
@@ -19,7 +20,7 @@ min-width: 0px !important;
 
 
 /* https://support.mozilla.org/en-US/questions/926424 */
-#urlbar .textbox-input-box { font-size:12pt !important; }
+#urlbar .textbox-input-box { font-size:10pt !important; }
 
 #navigator-toolbox,
 #TabsToolbar,

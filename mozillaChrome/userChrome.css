@@ -3,16 +3,16 @@
 
 @import url("CustomCSSforFx/classic/css/toolbars/menubar_in_fullscreen_mode.css");
 
-/* For high-resolution screen: */
+/* For dual screen, when I used the highest resolution for both screens: */
+/* For high-resolution screen:
 @media (min-device-width: 2560px) {
   * {
     font-size: 20pt !important;
   }
-}
-
-/* For small-resolution screen: */
+} /* */
+/* For small-resolution screen:
 @media (max-device-width: 1440px) {
   * {
     font-size: 10pt !important;
   }
-}
+} /* */

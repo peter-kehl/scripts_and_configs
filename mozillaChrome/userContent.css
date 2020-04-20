@@ -1,6 +1,7 @@
 /*@namespace url(http://www.w3.org/1999/xhtml);
 */
 
+/* New tabs are black. */
 @-moz-document url-prefix(about:blank) {*{background-color:#000000;}}
 
 /* or: @-moz-document domain(...) */
@@ -17,14 +18,7 @@
 
 /* TODO: disable, then have a separate .html with rules and colours to debug @media width*/
 
-/* Default font on various screens. Firefox takes full width of the screen (unless noted otherwise).
- * However, two alternatives per screen:
- * without a Sidebar, and with a Sidebar. Similar rules for the Tabs and Toolbar are in userChrome.css.
- * The following "font-size" applies to user content, and also to Sidebars. */
-/* High-resolution laptop: 2560px, Sidebar */
-/*@media (min-width: 1440px),
-@media (min-width: 400px ) and (max-width:  700px),  
-@media (min-width: 700px ) and (max-width:  900px)*/
+/* Default font on various screens. However, this doesn't work, unfortunately.
 @media (min-device-width: 2560px)
 {
   * {
@@ -32,13 +26,10 @@
   }
 }
 
-/* Small-resolution VGA: 1440px, Sidebar */
-/*@media (min-width: 900px) and (max-width: 1440px),
-@media (max-width: 400px)*/
 @media (max-device-width: 1440px)
 {
   * {
-    /*font-size: 13pt !important;*/
+    font-size: 13pt !important;
   }
-}
+} /* */
 

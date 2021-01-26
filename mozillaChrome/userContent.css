@@ -1,19 +1,46 @@
 /*@namespace url(http://www.w3.org/1999/xhtml);
 */
-/* Replace the moz-extension://... with the URL for your own installation of FESS Google Bookmarks Extension */
-@-moz-document url-prefix("moz-extension://995177b0-3af3-4d5c-99fd-0e89abbd04b0/") {
+/* Replace the moz-extension://... with the URL for your own installation of FESS Google Bookmarks Extension.
+   How to get that URL? Open FESS > "Open settings." Then append sidebar/sidebar.html, so
+   you get an URL like moz-extension://995177b0-3af3-4d5c-99fd-0e89abbd04b0/sidebar/sidebar.html.
+   Press F12 or Firefox menu > Tools > Web Developer > Inspector. */
+@-moz-document url-prefix("moz-extension://a7a8548a-47d9-471e-9208-c6536773500e/") {
   html *, body *, * {
         color: white;
         background-color: black;
   }
-  select, input, textarea {
-        color: black;
-        background-color: white;
+  select, input, textarea,
+    select::cue, input::cue, textarea::cue {
+/*  select, html body div div input, html body div div textarea { */
+        /* With the following, it's white on white, unless you highlight the content of the input/textarea! */
+        color: red;
+        background-color: blue;
   }
   span.fancytree-title, div.filterHBox input {
         color: white !important;
   }
+  
+  #editBkmkDlg, #editBkmkDlg-name, #editBkmkDlg-url, #editBkmkDlg-labels, #editBkmkDlg-notes,
+  .ui-dialog, .ui-dialog-buttonpane, .ui-widget-content {
+    background-color: black !important;
+    color: white !important;
+    /* Thanks God for https://support.mozilla.org/en-US/questions/814083 */
+    -moz-appearance: none !important;
+    /* Overriding Fess' JQuery-UI-controlled background image. */
+    background-image: none !important;
+  }
+  
+  .ui-widget-header {
+      background: none !important;
+  }
+  
+  /* Border-like around the bookmark tree. */
+  ul.fancytree-container {
+      background-color: black !important;
+  }  
 }
+
+/* CSS can use: width: calc(100%-6px) */
 
 /* New tabs are black. */
 @-moz-document url-prefix(about:blank) {*{background-color:#000000;}}

@@ -4,7 +4,11 @@
    How to get that URL? Open FESS > "Open settings." Then append sidebar/sidebar.html, so
    you get an URL like moz-extension://995177b0-3af3-4d5c-99fd-0e89abbd04b0/sidebar/sidebar.html.
    Press F12 or Firefox menu > Tools > Web Developer > Inspector. */
-@-moz-document url-prefix("moz-extension://a7a8548a-47d9-471e-9208-c6536773500e/") {
+/*@-moz-document url-prefix("moz-extension://ab063de6-61e6-4d8d-8698-1fc65a85e715/"),
+  @-moz-document url-prefix("moz-extension://83e6e263-e9ec-4220-adef-e1709d0055cf/"),*/
+@-moz-document url-prefix("moz-extension://7bfd799c-bd3f-4cc0-86f4-22105b6c27b0/"),
+               url-prefix("moz-extension://efdf0c26-e9b4-48f2-9a42-984f95aaf8f8/") {
+
   html *, body *, * {
         color: white;
         background-color: black;
@@ -43,7 +47,7 @@
 /* CSS can use: width: calc(100%-6px) */
 
 /* New tabs are black. */
-@-moz-document url-prefix(about:blank) {*{background-color:#000000;}}
+/*@-moz-document url-prefix(about:blank) {*{background-color:#000000;}}*/
 
 /* or: @-moz-document domain(...) */
 @-moz-document url(https://keep.google.com/) {
@@ -55,6 +59,13 @@
 	width: auto !important;
   }
 }
+
+/* Based on https://wiki.archlinux.org/index.php/Firefox/Tweaks#Add_[pdf]_after_links_to_PDF_files */
+a[href$=".pdf"]:after {
+    font-size: smaller;
+    content: " [pdf]";
+}
+
 /* @TODO Re-try the following, but have it before any other rules. */
 @import url("javascript:'*{ background-color: blue !important;}'");
 

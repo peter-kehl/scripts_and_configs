@@ -14,3 +14,5 @@
 # Not recommended, but I use it because of per-partition sub-sub-config
 [includeIf "gitdir:/"]
     path = /.gitconfig
+[pull]
+	rebase = true

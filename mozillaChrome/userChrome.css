@@ -1,9 +1,11 @@
 @import url("userChromeXUL.css");
 /* TEST: Tilda ~ doesn't work in @import URLs. But relative URLs do work. */
 
-@import "CustomCSSforFx/css/toolbars/toolbars_old_padding.css"; /**/
-@import "CustomCSSforFx/css/toolbars/tabs_toolbar_adjustments.css"; /**/
-@import url("CustomCSSforFx/classic/css/toolbars/menubar_in_fullscreen_mode.css");
+/* Based on https://www.reddit.com/r/FirefoxCSS/comments/8kt4k1/nav_bar_small_flexible_spaces_or_separators */
+#nav-bar toolbarspring {
+    min-width: 10px !important;
+    max-width: 20px !important;
+}
 
 /* For dual screen, when I used the highest resolution for both screens: */
 /* For high-resolution screen:
@@ -18,3 +20,8 @@
     font-size: 10pt !important;
   }
 } /* */
+
+@import "CustomCSSforFx/css/toolbars/toolbars_old_padding.css"; /**/
+@import "CustomCSSforFx/css/toolbars/tabs_toolbar_adjustments.css"; /**/
+@import url("CustomCSSforFx/classic/css/toolbars/menubar_in_fullscreen_mode.css");
+

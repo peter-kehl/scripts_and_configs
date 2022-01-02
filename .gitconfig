@@ -9,7 +9,7 @@
 	name = Peter Kehl
 [credential]
 	username = peter-kehl
-	helper = cache --timeout=3600000
+	helper = store
 
 # Not recommended, but I use it because of per-partition sub-sub-config
 [includeIf "gitdir:/"]

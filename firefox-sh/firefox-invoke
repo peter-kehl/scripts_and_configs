@@ -1,0 +1,4 @@
+#!/usr/bin/bash
+taskset -c 0-1 /usr/bin/firefox -P light-67
+./firefox-sync-ytd9zooq.light-67
+./firefox-sync-cache-ytd9zooq.light-67

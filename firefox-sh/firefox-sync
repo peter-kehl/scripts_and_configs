@@ -1,0 +1,36 @@
+#!/bin/sh
+
+if [ "$#" -ne "1" ]; then
+	echo "Invoke with exactly one parameter: the profile name."
+	exit 1
+fi
+
+static=static-$1
+link=$1
+volatile=/tmp/firefox-$1-$USER
+
+IFS=
+set -efu
+
+cd ~/.mozilla/firefox
+
+if [ ! -r $volatile ]; then
+	echo Creating $volatile
+	mkdir -m0700 $volatile
+fi
+
+if [ "$(readlink $link)" != "$volatile" ]; then
+	echo Moving $link to $static
+	mv $link $static
+	echo Symlinking $volatile to $link
+	ln -s $volatile $link
+fi
+
+if [ -e $link/.unpacked ]; then
+	echo Syncing $link to $static
+	rsync -av --delete --exclude .unpacked ./$link/ ./$static/ >/dev/null
+else
+	echo Syncing $static to $link
+	rsync -av ./$static/ ./$link/ >/dev/null
+	touch $link/.unpacked
+fi

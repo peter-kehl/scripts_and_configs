@@ -1,4 +1,27 @@
 @import url("userChromeXUL.css");
+
+/* 
+ * Using with https://addons.mozilla.org/en-US/firefox/addon/auto-mute/ or
+ * https://addons.mozilla.org/en-US/firefox/addon/mute-sites-by-default/ to hide the
+ * "muted" icons, unless the tab is currently playing.
+ * Thanks to https://www.reddit.com/r/FirefoxCSS/comments/p485un/how_to_disable_the_audio_playing_icon
+ *
+ * I also tried to reverse-apply https://support.mozilla.org/en-US/questions/1318768, but that
+ * didn't work. https://support.mozilla.org/en-US/questions/1286184 didn't work (it hid icons, too).
+ * See also chrome://browser/skin/browser.css and
+ * jar:file:///usr/lib/firefox/browser/omni.ja!/chrome/browser/skin/classic/browser/tabbrowser/
+ **/
+.tab-icon-overlay:not([soundplaying]) {
+  display: none;
+}
+.tab-icon-image:not([soundplaying]) {
+  opacity: 1 !important;
+}
+.tab-icon-image:[soundplaying] {
+  opacity: 1 !important;
+  /** background-color: black !important; (for Dark theme) - but it doesn't apply! See browser.css */
+}
+
 /* TEST: Tilda ~ doesn't work in @import URLs. But relative URLs do work. */
 
 /* Based on https://www.reddit.com/r/FirefoxCSS/comments/8kt4k1/nav_bar_small_flexible_spaces_or_separators */

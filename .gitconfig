@@ -1,8 +1,8 @@
 [rebase]
 	abbreviateCommands = true
 	autoSquash = true
-[help]
-	autocorrect = 2 #in tenths of a second
+#[help]
+#	autocorrect = 2 #in tenths of a second
 
 [user]
 	email = peter.kehl@gmail.com
@@ -16,3 +16,7 @@
     path = /.gitconfig
 [pull]
 	rebase = true
+[init]
+	defaultBranch = main
+[protocol "file"]
+	allow = always

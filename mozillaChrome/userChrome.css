@@ -55,3 +55,9 @@ padding: 0px !important;
 }
 */
 
+/* Thx to https://chiraag.me/firefox/index.php */
+.tabbrowser-tab .tab-close-button
+{
+   display:none!important;
+}
+

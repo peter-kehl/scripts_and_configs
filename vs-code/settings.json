@@ -13,10 +13,8 @@
     "editor.cursorSurroundingLines": 3,
     "editor.unfoldOnClickAfterEndOfLine": true,
     "bracket-pair-colorizer-2.depreciation-notice": false,
-    "workbench.activityBar.visible": false,
     "workbench.editor.wrapTabs": true,
-    "editor.fontSize": 18,
-    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.fontSize": 15,
     "window.menuBarVisibility": "toggle",
     "editor.guides.bracketPairs": true,
     "security.workspace.trust.untrustedFiles": "open",
@@ -28,7 +26,6 @@
     "git-buttons": {
         "commit": true
     },
-    "workbench.colorTheme": "Default High Contrast",
     "editor.rulers": [
         100
     ],
@@ -37,7 +34,6 @@
     "editor.renderLineHighlight": "gutter",
     "workbench.editor.highlightModifiedTabs": true,
     "rust-analyzer.typing.autoClosingAngleBrackets.enable": true,
-    "editor.fontFamily": "'Source Code Pro', 'monospace', monospace",
     "telemetry.telemetryLevel": "off",
     "codetour.recordMode": "pattern",
     "codetour.customTourDirectory": "",
@@ -45,8 +41,6 @@
     "bookmarks.sideBar.expanded": true,
     "window.autoDetectHighContrast": false,
     "window.restoreFullscreen": true,
-    "workbench.editor.enablePreview": false,
-    "editor.wordWrap": "bounded",
     "BUFchronicler.ffmpeg-binary": "/usr/bin/ffmpeg",
     "chronicler.ffmpeg-binary": "/home/pkehl/GIT/present_markdown_reveal.js/all_args.sh",
     "chronicler.dest-folder": "${workspaceFolder}/.videos",
@@ -63,7 +57,6 @@
     "vscrof.storageFileTitle": "VsCode - Remember Open Files (vscrof)",
     "tab-groups.relativePaths": true,
     "tab-groups.saveGlobally": false,
-    "editor.minimap.enabled": false,
     "sort-tabs.showStatusbarMessage": false,
     "errorLens.statusBarMessageEnabled": true,
     "errorLens.statusBarColorsEnabled": true,
@@ -83,5 +76,127 @@
     "git.openRepositoryInParentFolders": "always",
     "remote.autoForwardPorts": false,
     "typescript.tsserver.watchOptions": {},
-    "workbench.statusBar.visible": false
+    "colorTabs.titleBackground": true,
+    "workbench.colorTheme": "Tomorrow Night Blue", /* or: "Default High Contrast" */
+    "cSpell.userWords": [
+        "lifos",
+        "struct",
+        "rustdoc",
+        "rustc",
+        "rustfmt",
+        "clippy",
+        "Punct",
+        "rlib",
+        "supertrait",
+        "subtrait",
+        "newtype",
+        "uninit",
+        "rustacean",
+        "hasher",
+        "alloc",
+        "VecDeque",
+        "deque",
+        "actix",
+        "shuttleapp",
+        "peekable",
+        "evaluatable",
+        "fallible",
+        "ctype",
+        "msrv",
+        "runtimes",
+        "repr",
+        "askama",
+        "fakels",
+        "localfs",
+        "trybuild",
+        "rustversion",
+        "compilertest",
+        "formatcp",
+        "mockall",
+        "automock",
+        "thiserror",
+        "anonymize",
+        "anonymization",
+        "paralellize",
+        "prefixless",
+        "skippable",
+        "subdir",
+        "troubleshoot",
+        "WebDAV",
+        "websocket",
+        "Websocket",
+        "turso",
+        "Deta",
+        "spacefile",
+        "kehl"
+    ],
+    "update.showReleaseNotes": false,
+    "editor.mouseWheelScrollSensitivity": 4,
+    "rust-analyzer.inlayHints.typeHints.enable": true,
+    "rust-analyzer.showUnlinkedFileNotification": false,
+    "editor.wordWrap": "on", /* or: bounded */
+    "markdownlint.config": {
+        "MD013": false,
+        "MD031": false
+    },
+    "markdown.preview.scrollPreviewWithEditor": false,
+    "markdown.preview.scrollEditorWithPreview": false,
+    "markdown.editor.pasteUrlAsFormattedLink.enabled": "smart",
+    "markdown.validate.enabled": true,
+    "grammarly.config.suggestions.UnnecessaryEllipses": true,
+    "editor.fontLigatures": true,
+    "scm.diffDecorations": "overview",
+    "editor.glyphMargin": false,
+    "editor.showFoldingControls": "never",
+    "editor.fontFamily": "Inconsolata Light Extra-Condensed, DejaVu Sans Mono, Ligconsolata, JetBrains Mono, JetBrains Mono Extralight, fira-code-nerd", /* or: Source Code Pro */
+    "editor.fontSize": 8,
+    "LIGCONS_editor.fontSize": 10,
+    "LIGCONS_window.zoomLevel": -0.15,
+    "DEJA_editor.fontSize": 9,
+    "DEJA_window.zoomLevel": -0.54,
+    "merge-conflict.decorators.enabled": false,
+    "merge-conflict.diffViewPosition": "Beside",
+    "errorLens.enabledInMergeConflict": false,
+    "editor.lineNumbers": "off", /**/
+    "git.enabled": false,
+    "git.openDiffOnClick": false,
+    "workbench.editor.tabActionCloseVisibility": false,
+    "window.zoomLevel": 2,
+    "editor.stickyScroll.enabled": true,
+    "editor.minimap.enabled": false,
+    "editor.cursorBlinking": "smooth",
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "window.density.editorTabHeight": "compact",
+    "workbench.editor.pinnedTabSizing": "shrink",
+    "editor.guides.bracketPairsHorizontal": true,
+    "workbench.tree.renderIndentGuides": "always", /* default: onHover */
+    "workbench.colorCustomizations": {
+        "tree.indentGuidesStroke": "#999999" /* Default is #555555 - too dark. */
+    },
+    "debug.toolBarLocation": "commandCenter",
+    "window.customTitleBarVisibility": "windowed", /* windowed: hide in Full Screen */
+    "window.commandCenter": true,
+    "workbench.activityBar.location": "hidden",
+    /* automate: */
+    "files.insertFinalNewline": false, /* default: false */
+    "files.trimFinalNewlines": false, /* default: false */
+    /* */
+    "files.defaultLanguage": "rust",
+    /* automate: */
+    "editor.formatOnSave": true, /* default: false */
+    "editor.formatOnSaveMode": "modificationsIfAvailable", /* default: file; "modifications" require source control */
+    "editor.formatOnPaste": true, /* default: false */
+    /* */
+    "editor.find.autoFindInSelection": "multiline",
+    /* automate GIT */
+    "git.autofetch": false,
+    "git.autoStash": false,
+    "git.mergeEditor": false, /* default: false */
+    "git.enableSmartCommit": false,
+    "git.suggestSmartCommit": false,
+    /* */
+    "workbench.statusBar.visible": false,
+    /* "workbench.tree.indent": 11, /* default 8 */
+    /* "workbench.editor.enablePreview": false, /**/
 }

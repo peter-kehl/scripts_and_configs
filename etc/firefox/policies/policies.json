@@ -1,0 +1,8 @@
+{
+  "policies": {
+    "ManualAppUpdateOnly": true,
+    "why_no_manual_update": "Because my Linux distribution package manager handles it.",
+    "for_installation_instructions_see": "https://mozilla.github.io/policy-templates/"
+  }
+}
+

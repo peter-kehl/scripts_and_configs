@@ -1,7 +1,11 @@
 {
   "policies": {
     "ManualAppUpdateOnly": true,
+    "DisableAppUpdate-is-NOT-needed": {},
     "why_no_manual_update": "Because my Linux distribution package manager handles it.",
+
+    "DisableProfileRefresh": true,
+
     "for_installation_instructions_see": "https://mozilla.github.io/policy-templates/"
   }
 }

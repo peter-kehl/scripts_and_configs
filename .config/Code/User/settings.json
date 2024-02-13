@@ -184,9 +184,13 @@
     /* */
     "files.defaultLanguage": "rust",
     /* automate: */
-    "editor.formatOnSave": true, /* default: false */
-    "editor.formatOnSaveMode": "modificationsIfAvailable", /* default: file; "modifications" require source control */
+    /* editor.formatOnSave caused problems:
+    - Removing a new line from the end of a file
+    */
+    /*"editor.formatOnSave": true, /* default: false */
+    /*"editor.formatOnSaveMode": "modificationsIfAvailable", /* default: file; "modifications" require source control */
     "editor.formatOnPaste": true, /* default: false */
+
     /* */
     "editor.find.autoFindInSelection": "multiline",
     /* automate GIT */
@@ -196,7 +200,12 @@
     "git.enableSmartCommit": false,
     "git.suggestSmartCommit": false,
     /* */
+    "workbench.editor.pinnedTabsOnSeparateRow": false, /* default: false */
     "workbench.statusBar.visible": false,
     /* "workbench.tree.indent": 11, /* default 8 */
-    /* "workbench.editor.enablePreview": false, /**/
+    "workbench.editor.enablePreview": false, /**/
+    
+    "editor.renderWhitespace": "selection",
+    "code-eol.highlightNonDefault": true,
+    "code-eol.highlightExtraWhitespace": true,
 }
